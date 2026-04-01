@@ -8,7 +8,7 @@ This document explains the most important aspects of 02_api_deployment.py.
 
 Open 02_api_deployment.py in your CML Session. Familiarize yourself with the code. Then open mlops.py and also familiarize yourself with the code.
 
-Next, reutrn to 02_api_deployment.py and press the play button in order to run the whole script. You will be able to observe code output on the right side of your screen.
+Next, return to 02_api_deployment.py and press the play button in order to run the whole script. You will be able to observe code output on the right side of your screen.
 
 #### Code Highlights
 
