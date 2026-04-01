@@ -72,8 +72,8 @@ The data platform from Cloudera provides self-service access to integrated, mult
 
 Please find detailed HOL instructions in the following folders:
 
-* [Link to the English Guide](https://github.com/pdefusco/CML_MLops_Banking_MLFlow/tree/main/step_by_step_guides/english)
-* [Enlace a la Guía en Español](https://github.com/pdefusco/CML_MLops_Banking_MLFlow/tree/main/step_by_step_guides/espa%C3%B1ol)
-* [Lien vers le Guide en Français](https://github.com/pdefusco/CML_MLops_Banking_MLFlow/tree/main/step_by_step_guides/fran%C3%A7ais)
-* [Link per la Guida in Italiano](https://github.com/pdefusco/CML_MLops_Banking_MLFlow/tree/main/step_by_step_guides/italiano)
-* [Link para o Guia em Português](https://github.com/pdefusco/CML_MLops_Banking_MLFlow/tree/main/step_by_step_guides/portugu%C3%AAs)
+* [Link to the English Guide](./step_by_step_guides/english/)
+* [Enlace a la Guía en Español](./step_by_step_guides/espa%C3%B1ol)
+* [Lien vers le Guide en Français](./step_by_step_guides/fran%C3%A7ais)
+* [Link per la Guida in Italiano](./step_by_step_guides/italiano)
+* [Link para o Guia em Português](./step_by_step_guides/portugu%C3%AAs)
