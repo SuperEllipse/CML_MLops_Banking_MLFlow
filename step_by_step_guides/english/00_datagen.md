@@ -6,7 +6,7 @@ This document explains the most important aspects of 00_datagen.py.
 
 #### Instructions for Code Execution
 
-Open 00_datagen.py in your CML Session and update the CONNECTION_NAME variable at lines 162 as instructed by your HOL Lead.
+Open 00_datagen.py in your CML Session
 
 Next, press the play button in order to run the whole script. Code output is available on the right side of your screen.
 
