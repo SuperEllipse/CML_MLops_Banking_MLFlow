@@ -6,7 +6,7 @@ This document explains the most important aspects of 01_train_xgboost.py.
 
 #### Instructions for Code Execution
 
-Open 01_train_xgboost.py in your CML Session and update the DBNAME, STORAGE, and CONNECTION_NAME variables at lines 60-62 as instructed by your HOL Lead.
+Open 01_train_xgboost.py in your CML Session and see how the DBNAME, STORAGE, and SPARK_CONNECTION_NAME variables are getting set from your setup
 
 Next, press the play button in order to run the whole script. You will be able to observe code output on the right side of your screen.
 
@@ -14,19 +14,13 @@ Navigate to the MLFLow Experiments tab and validate experiment creation. Open th
 
 Next, return to the CML Session and modify the code:
 
-* At line 74, replace the following line of code:
+* Change the max_depth values below and re-run to conduct new Training experiments :
 
-```
-model = XGBClassifier(use_label_encoder=False, eval_metric="logloss")
-```
-
-with:
 
 ```
 model = XGBClassifier(use_label_encoder=False, max_depth=4, eval_metric="logloss")
 ```
 
- * At line 95, add:
 
  ```
 mlflow.log_param("max_depth", 4)
