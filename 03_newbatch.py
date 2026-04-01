@@ -93,7 +93,7 @@ class BankDataGen:
         df = df.withColumn("fraud_trx", df["fraud_trx"].cast(IntegerType()))
         df = df.withColumn(
             "customer_score",
-            F.when(rand() < 0.20, rand())  # 20% of the time, just random noise
+            F.when(F.rand() < 0.20, F.rand())  # 20% of the time, just random noise
             .otherwise(F.col("fraud_trx") * F.col("age") * F.col("mortgage_balance"))
         )
         df = df.withColumn("customer_score", F.col("customer_score").cast(FloatType()))

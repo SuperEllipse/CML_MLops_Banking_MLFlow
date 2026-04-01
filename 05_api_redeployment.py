@@ -155,10 +155,10 @@ class ModelReDeployment():
         """
 
         project_id = os.environ["CDSW_PROJECT_ID"]
-
+        sort_param = '-created_at'
         # gather model details
         models = (
-            self.client.list_models(project_id=project_id, async_req=True, page_size = 50)
+            self.client.list_models(project_id=project_id, async_req=True, page_size = 50, sort=sort_param)
             .get()
             .to_dict()
         )
@@ -220,7 +220,7 @@ experimentId = runsDf.iloc[-1]['experiment_id']
 experimentRunId = runsDf.iloc[-1]['run_id']
 
 modelPath = "artifacts"
-modelName = "FraudCLF-" + USERNAME
+modelName = "FraudCLF" + USERNAME
 
 deployment = ModelReDeployment(projectId, USERNAME)
 getLatestDeploymentResponse = deployment.get_latest_deployment_details(modelName)
@@ -240,7 +240,8 @@ cpu = 2
 mem = 4
 replicas = 1
 
-runtimeId = "docker.repository.cloudera.com/cloudera/cdsw/ml-runtime-pbj-workbench-python3.10-standard:2025.09.1-b5" #Modify as needed
+#runtimeId = "docker.repository.cloudera.com/cloudera/cdsw/ml-runtime-pbj-workbench-python3.10-standard:2025.09.1-b5" #Modify as needed
+runtimeId = "docker.repository.cloudera.com/cloudera/cdsw/ml-runtime-pbj-workbench-python3.10-standard:2026.01.1-b6"
 
 createModelBuildResponse = deployment.createModelBuild(projectId, modelVersionId, modelCreationId, runtimeId, cpu, mem, replicas)
 modelBuildId = createModelBuildResponse.id

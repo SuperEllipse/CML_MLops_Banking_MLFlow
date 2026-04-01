@@ -60,7 +60,7 @@ from pandas import json_normalize
 client = cmlapi.default_client()
 
 username = os.environ["PROJECT_OWNER"]
-modelName = "FraudCLF-" + username
+modelName = "FraudCLF" + username
 
 project_id = os.environ["CDSW_PROJECT_ID"]
 client.list_models(project_id)
