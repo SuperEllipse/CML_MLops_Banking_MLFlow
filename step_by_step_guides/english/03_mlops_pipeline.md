@@ -6,49 +6,51 @@ This document explains the most important aspects of 03_newbatch.py, 04_train_xg
 
 #### Instructions for Code Execution
 
-Open 03_newbatch.py, 04_train_xgboost.py and 05_api_redeployment.py in your CML Session. Familiarize yourself with the code and update the DBNAME, STORAGE, and CONNECTION_NAME variables as instructed by your HOL Lead.
+Open 03_newbatch.py, 04_train_xgboost.py and 05_api_redeployment.py in your CML Session. Familiarize yourself with the code.
 
 Do not run the scripts individually. Create a CML Job for each instead. Do not run the jobs yet.
 
 Create Job "New Batch" with the following configurations:
 
 ```
-Name: New Batch Paul
+Name: New Batch user001
 Script: 03_newbatch.py
 Editor: Workbench
-Kernel: Python 3.9
+Kernel: Python 3.10
 Spark Add On: Spark 3.2 or 3.3
 Edition: Standard
-Version: 2024.02
+Version: 2026.06
 Schedule: Manual
 Resource Profile: 2 vCPU / 4 Gib / 0 GPU
 ```
+![alt text](../../img/holbnk_job1.png)
 
-Create Job "New Batch" with the following configurations:
+Create Job "Retrain" with the following configurations:
 
 ```
-Name: Retrain XGBoost Paul
+Name: Retrain XGBoost user001
 Script: 04_train_xgboost.py
 Editor: Workbench
-Kernel: Python 3.9
+Kernel: Python 3.10
 Spark Add On: Spark 3.2 or 3.3
 Edition: Standard
-Version: 2024.02
-Schedule: Dependent on New Batch Paul
+Version: 2026.06
+Schedule: Dependent on New Batch user001
 Resource Profile: 2 vCPU / 4 Gib / 0 GPU
 ```
+![alt text](../../img/holbnk_job2.png)
 
-Create Job "New Batch" with the following configurations:
+Create Job "Redeploy" with the following configurations:
 
 ```
-Name: API Redeployment Paul
+Name: API Redeployment user001
 Script: 05_api_redeployment.py
 Editor: Workbench
 Kernel: Python 3.9
 Spark Add On: Spark 3.2 or 3.3
 Edition: Standard
 Version: 2024.02
-Schedule: Dependent on Retrain XGBoost Paul
+Schedule: Dependent on Retrain XGBoost user001
 Resource Profile: 2 vCPU / 4 Gib / 0 GPU
 ```
 
