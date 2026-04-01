@@ -1,17 +1,26 @@
 ## 04 Model Monitoring
 
+### Context
+  Why monitor models ? 
+  A simple answer would be , we need to monitor Models because Trustworthiness & Service Reliability of Models in production impacted by Data Quality and Drift Issues.
+![](../../img/holbnk_model_monitoring1.png)
+
+Cloudera AI Workbench provides the backbone framework that sets up model monitoring for your use case. This framework includes a Model Metrics Store and APIs to manage model metrics, as shown in the diagram below
+![](../../img/holbnk_model_monitoring2.png)
 #### Objective
 
 This document explains the most important aspects of 06_model_simulation.py and 07_model_monitoring.py.
 
 #### Instructions for Code Execution
 
-Open 06_model_simulation.py and 07_model_monitoring.py in your CML Session. Familiarize yourself with the code and update the DBNAME, STORAGE, and CONNECTION_NAME variables as instructed by your HOL Lead.
+Open 06_model_simulation.py and 07_model_monitoring.py in your CML Session. Familiarize yourself with the code.
 
 Execute 06_model_simulation.py and immediately navigate out of the Session to the CML Model Deployment. Open the Monitoring tab and watch the monitoring dashboard get updated in real time as requests are received by the model endpoint.
+![](../../img/holbnk_model_monitoring3.png)
 
 Next, run 07_model_monitoring.py. Explore the model monitoring diagrams on the right side of the page. How is your model performing?
 
+![](../../img/holbnk_model_monitoring4.png)
 #### Code Highlights
 
 06_model_simulation.py creates more synthetic data and leverages the CDSW SDK to interact with the deployed endpoints. The data is submitted to the model along with ground truth in order to simulate a wave of requests to the endpoint.

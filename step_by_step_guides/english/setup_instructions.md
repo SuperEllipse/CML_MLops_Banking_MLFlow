@@ -36,10 +36,14 @@ Runtimes:
 
 #### 2. Set Project Environment Variables
 
-Set the following environment variables at the Project Level.
+Set the following environment variables at the Project Settings.
 
-SPARK_CONNECTION_NAME -> Found in Spark Data Connections tab.
+SPARK_CONNECTION_NAME -> Found in Spark Data Connections tab[ ask your Instructor if you are not sure, usually the picture below should give you the details].
 DBNAME_PREFIX -> Arbitrary - please use one word without special characters.
+
+![img text](../../img/holbnk_env_variables.png)
+
+
 
 #### 3. Create a CML Session and Install Requirements
 
